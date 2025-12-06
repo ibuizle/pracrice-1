@@ -18,135 +18,297 @@
 @import url('./footer.css');
 
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  padding: 0;
-  list-style: none;
-  margin-top: 24px;
+@media only screen and (min-width: 1366px) {
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 
-.gallery-item {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
+.header {
+  padding: 20px 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+/* Ось ТОЧКА, що робить хедер В ЛІНІЮ */
+.header_inner {
   display: flex;
-  flex-direction: column;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover; 
-  display: block;
-}
-
-.img-info {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px 16px;
-  font-size: 14px;
-}
-
-.img-info li {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.img-info b {
-  font-weight: 600;
-}
-
-.form {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 12px;
-  margin: 40px 0;
+  justify-content: space-between;
 }
 
-.form input[name="search-text"] {
-  width: 320px;
-  padding: 10px 14px;
-  border: 1px solid #cfcfcf;
-  border-radius: 6px;
-  outline: none;
-  font-size: 16px;
-  transition: border-color 0.25s;
+/* Лівий блок: логотип + назва */
+.header_left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.form input[name="search-text"]:focus {
-  border-color: #6ea8fe;
-}
+/* .header_logo {
+  width: 32px;
+  height: 32px;
+  fill: #059669;
+} */
 
-.form button[type="submit"] {
-  padding: 10px 22px;
-  background-color: #6ea8fe;
-  border: none;
-  border-radius: 6px;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.25s;
-}
-
-.form button[type="submit"]:hover {
-  background-color: #4f90f5;
-}
-
-
-.loader {
-  width: 48px;
-  height: 48px;
-  border: 5px solid #cfcfcf;
-  border-top-color: #6ea8fe;
-  border-radius: 50%;
-  animation: spin 0.9s linear infinite;
-  margin: 20px auto 0;
-  display: block;      
-}
-
-.loader.is-hidden {
-  display: none;         
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.load-more {
-  display: block;
-  margin: 32px auto 40px; 
-  padding: 14px 36px;     
+.header_title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f2937;
   
-  font-size: 16px;
+}
+
+/* Навігація */
+.nav_list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-left: 237px;
+}
+
+.nav_link {
+  text-decoration: none;
+  font-weight: 400;
+font-size: 16px;
+
+/* line-height: 28px; */ 
+line-height: 175%;
+color: #22343d;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav_link:hover {
+  color: #111827;
+}
+
+.nav_link_active {
   font-weight: 600;
-  
-  border-radius: 10px;
-  border: none;
+font-size: 16px;
 
-  background-color: #6ea8fe;
-  color: #ffffff;
+/* line-height: 28px; */ 
+line-height: 175%;
+color: #22343d;
+}
+
+/* Кнопки справа */
+.header_buttons {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  margin-right: 73px;
   
+}
+
+.header_btn {
+  padding: 8px 20px;
+  border-radius: px;
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  border: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.load-more:hover {
-  background-color: #4f90f5;
-  transform: scale(1.05);
+/* сіра (outline) */
+.btn_outline {
+  background: #ffffff;
+  border: 1px solid #bcd0e5;
+  color: #374151;
+  font-weight: 600;
+font-size: 16px;
+text-align: center;
+color: #173a56;
 }
 
-.load-more:active {
-  transform: scale(0.97);
+.btn_outline:hover {
+  background: #f3f4f6;
 }
 
-.is-hidden {
-  display: none
+/* зелена */
+.btn_primary {
+  background: #059669;
+  font-weight: 600;
+font-size: 16px;
+color: #fff;
+}
+
+.btn_primary:hover {
+  background: #047857;
+}
+
+}
+
+
+/* ===== HERO ===== */
+
+.hero {
+  padding: 70px 0 90px;
+}
+
+.hero_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* LEFT */
+.hero_content {
+  max-width: 480px;
+}
+
+.hero_title {
+  font-size: 44px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #22343d;
+  margin-bottom: 18px;
+}
+
+.hero_text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #475e69;
+  margin-bottom: 32px;
+}
+
+/* buttons */
+.hero_actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero_video {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #02897a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero_play {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #02897a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* RIGHT */
+.hero_image img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* HERO */
+.hero {
+  padding: 70px 0 90px;
+}
+
+/* контейнер hero */
+.hero_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.btn_hero{
+  border-radius: 4px;
+width: 178px;
+height: 53px;
+background: #02897a;
+font-weight: 700;
+font-size: 16px;
+color: #fff;
+}
+
+.hero_video {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #02897a;
+  font-weight: 600;
+  text-decoration: none;
+
+  
+  padding-bottom: 2px;
+}
+
+.hero_video {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero_video-text {
+  position: relative;
+  line-height: 1;
+  padding-top: 8px;
+}
+
+.hero_video-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom:0px;      /* 🔥 керуєш відстанню */
+  width: 100%;
+  height: 2px;
+  background-color: #02897a;
+}
+
+
+/* ліва частина */
+.hero_content {
+  max-width: 480px;
+}
+
+/* заголовок */
+.hero_title {
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #22343d;
+  margin-bottom: 18px;
+}
+
+/* текст */
+.hero_text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475e69;
+  margin-bottom: 32px;
+}
+
+/* кнопки */
+.hero_actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* ✅ ПРАВА ЧАСТИНА — JPG */
+.hero_image {
+  flex-shrink: 0; /* ❗ щоб зображення НЕ стискалось */
+}
+
+.hero_image img {
+  display: block;
+  width: 540px;     /* 🔥 як у дизайні */
+  height: auto;
 }
