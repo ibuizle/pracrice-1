@@ -27,8 +27,8 @@ body {
 
 .header {
   padding: 20px 0;
-  background-color: #ffffff;
   border-bottom: 1px solid #eee;
+  background: #fff;
 }
 
 /* Ось ТОЧКА, що робить хедер В ЛІНІЮ */
@@ -42,7 +42,8 @@ body {
 .header_left {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
+  margin: 0;
 }
 
 /* .header_logo {
@@ -63,20 +64,25 @@ body {
   display: flex;
   align-items: center;
   gap: 32px;
-  margin-left: 237px;
 }
 
 .nav_link {
   text-decoration: none;
+/* line-height: 28px; */ 
+line-height: 175%;
+color: #22343d;
+  font-size: 15px;
   font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.nav_product{
+  font-weight: 600;
 font-size: 16px;
 
 /* line-height: 28px; */ 
 line-height: 175%;
 color: #22343d;
-  font-size: 15px;
-  font-weight: 500;
-  transition: color 0.2s ease;
 }
 
 .nav_link:hover {
@@ -97,13 +103,12 @@ color: #22343d;
   display: flex;
   align-items: center;
   gap: 21px;
-  margin-right: 73px;
   
 }
 
 .header_btn {
   padding: 8px 20px;
-  border-radius: px;
+  border-radius: 4px;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
@@ -144,14 +149,7 @@ color: #fff;
 /* ===== HERO ===== */
 
 .hero {
-  padding: 70px 0 90px;
-}
-
-.hero_inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 60px;
+  padding: 25px 0;
 }
 
 /* LEFT */
@@ -159,20 +157,7 @@ color: #fff;
   max-width: 480px;
 }
 
-.hero_title {
-  font-size: 44px;
-  line-height: 1.2;
-  font-weight: 700;
-  color: #22343d;
-  margin-bottom: 18px;
-}
 
-.hero_text {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #475e69;
-  margin-bottom: 32px;
-}
 
 /* buttons */
 .hero_actions {
@@ -209,11 +194,6 @@ color: #fff;
 }
 
 
-/* HERO */
-.hero {
-  padding: 70px 0 90px;
-}
-
 /* контейнер hero */
 .hero_inner {
   display: flex;
@@ -233,6 +213,7 @@ background: #02897a;
 font-weight: 700;
 font-size: 16px;
 color: #fff;
+border: 1px solid #bcd0e5;
 }
 
 .hero_video {
@@ -270,6 +251,12 @@ color: #fff;
   width: 100%;
   height: 2px;
   background-color: #02897a;
+  font-weight: 600;
+font-size: 16px;
+text-decoration: underline;
+text-decoration-skip-ink: none;
+
+
 }
 
 
@@ -289,9 +276,12 @@ color: #fff;
 
 /* текст */
 .hero_text {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #475e69;
+ font-weight: 400;
+font-size: 18px;
+
+/* line-height: 28px; */ 
+line-height: 156%;
+color: #22343d;
   margin-bottom: 32px;
 }
 
@@ -311,4 +301,107 @@ color: #fff;
   display: block;
   width: 540px;     /* 🔥 як у дизайні */
   height: auto;
+}
+
+
+/* ===== FEATURES ===== */
+
+.features {
+  padding: 74px 0;
+  text-align: center;
+}
+
+.features_title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #22343d;
+  margin-bottom: 50px;
+}
+
+.features_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 76px;
+}
+
+.features_item {
+  text-align: left;
+}
+
+.features_icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.features_icon svg {
+  fill: #ffffff;
+}
+
+/* icon colors */
+.icon-green {
+  background: #02897a;
+}
+.icon-blue {
+  background: #4d8dff;
+}
+.icon-purple {
+  background: #740a76;
+}
+.icon-red {
+  background: #f03e3d;
+}
+
+.features_name {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 13px;
+  color: #22343d;
+}
+
+.features_text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #475e69;
+}
+
+/* button */
+.features_btn {
+  padding: 15px 34px;
+  border-radius: 4px;
+  background: #02897a;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.features_btn:hover {
+  background: #047857;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+  .features_list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .features_list {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .features_item {
+    text-align: center;
+  }
 }
